@@ -1,6 +1,6 @@
-# KLRN campaign landing page 
+# KLRN landing page template
 
-This is a campaign landing page template built with PHP 5 and Bootstrap 3. 
+This is a landing page template for KLRN digital campaigns, built with PHP 5 and Bootstrap 3. 
 
 So far it has one page, for KLRN Passport campaigns. The page is sliced into PHP from this front-end design: https://github.com/ptdriscoll/npm-workflow. 
 

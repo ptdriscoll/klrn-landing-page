@@ -5,3 +5,7 @@
 .settings/
 .buildpath
 .project
+
+#Other
+googleAnalytics.php
+facebookPixel.php
