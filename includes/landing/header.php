@@ -78,8 +78,6 @@ else {
     <![endif]-->
 
     <?php if (file_exists($doc_includes.'googleAnalytics.php')) include 'googleAnalytics.php'; ?>
-    
-    
     <?php if (file_exists($doc_includes.'facebookPixel.php')) include 'facebookPixel.php'; ?>    
     
   </head>
