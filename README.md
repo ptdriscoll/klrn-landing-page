@@ -1,32 +1,81 @@
-# KLRN landing page template
+# An npm workflow
 
-This is a landing page template for KLRN digital campaigns, built with PHP 5 and Bootstrap 3. 
+This is an npm workflow, in a Windows environment, for a KLRN Passport campaign landing page. 
 
-So far it has one page, for KLRN Passport campaigns. The page is sliced into PHP from this front-end design: https://github.com/ptdriscoll/npm-workflow. 
+The page is built with a customized download of Bootstrap 3 and custom JavaScript. The Bootstrap download settings are saved in src/assets/config.json. 
 
-Google Analytics UTM parameters are used to determine customizations for the hero's image and text, and the main headline. A cookie remembers the content parameters, and also passes the values through the conversion funnel.
+The hero's image and text, and the main headline, are dynamically customized based on URL values passed in with Google Analytics UTM parameters. For example, here are values to use for the show Victoria in a campaign called Passport-2017:
 
-### Live Passport page 
+- ?utm_source=facebook
+- &utm_medium=cpc
+- &utm_campaign=Passport-2017
+- &utm_content=Victoria   
+
+### Live page 
+(This version is sliced into PHP, and the UTM values get saved to a cookie)  
 
 - http://pbs.klrn.org/passport/
 - http://pbs.klrn.org/passport/?utm_source=facebook&utm_medium=cpc&utm_campaign=Passport-2017&utm_content=Victoria
 
-### Adding a new Passport campaign
+### Start
 
-1. Follow steps at https://github.com/ptdriscoll/npm-workflow
-2. Copy styles.css from https://github.com/ptdriscoll/npm-workflow and add to passport/assets/css/
-3. Add custom labels and titles to the `$customContent` variable in includes/landing/customContent.php
-4. Add campaign's image folder with images to landing/passport/assets/
-5. Make sure the campaign name in the UTM parameters has "Passport" in it, for example: utm_campaign=Passport-2017
+Dependent JavaScript files are added to src/assets/js/ and require() statements are used in custom.js, along with any custom scripts, to pull everything together.
+
+Custom JavaScript has also been added to index.html to manage custom content, mainly by parsing Google Analytics' UTM parameters and adding them as classes to the body tag. This JavaScript code is located here only so it can be replaced by PHP in an optional separate process.  
+
+Dependent CSS files are put in src/assets/css/ and custom CSS is added to custom.css while @import statements are used in styles.css to pull everything together.
+
+Each campaign has its own folder for hero images, created in src/assets/ - the image paths are added in src/assets/css/custom.css.  
+
+`npm start` will run browserify to compile the JavaScript, and live-server to start a live-reload server on port 8080 and open the development web page in a Chrome browswer.
+
+### Build
+
+Each new image folder for a campaign should be listed in the `prod:setup-custom` command in scripts in package.json, so that they're reproduced in production (though folders can be omitted if they were copied in a previous build, and if no changes were made to the images). For example, here is the command with folders for Passport-Launch and Passport-2017:  
+
+```
+"prod:setup-custom": "mkdirp dist/assets/img-passport-launch dist/assets/img-passport-2017",
+``` 
+    
+Each campaign's image folder must also have a unique npm command to copy images to production (but a folder can be skipped if it was copied in a previous build, and if no changes were made to the images). For example, here's the command for the img-passport-2017 folder:
+
+```
+"prod:copy-images-custom-2017": "copy src\\assets\\img-passport-2017\\* dist\\assets\\img-passport-2017\\",
+```   
+
+NOTE: this workflow was written in a Windows environment, and uses commands such as copy and type to manage output to the dist folder, as well as `\\` where needed.
+
+ANOTHER NOTE: `uncss` is run before appending the custom.css, because the dynamic custom styles will otherwise be read as unused and stripped out.
+
+`npm run build` will copy index.html and the images, concat, compress and clean the JavaScript and CSS, put everything in a dist folder, start another server on port 8088 and open the production web page in a Chrome browswer.  
+
+### Adding a new campaign
+
+1. Create a new image folder with a unique name in src\assets and add hero images
+2. Add custom labels and titles to the `custom_content` JavaScript object in src/index.html
+3. Create a Google Analytics campaign code for each piece of content:
+   - For example: **?utm_source=facebook&utm_medium=cpc&utm_campaign=Passport-2017&utm_content=Victoria**
+   - Make sure the UTM parameter for the campaign name has "Passport" in it: **&utm_campaign=Passport-2017**
+   - Make sure the content parameters match the keys in `custom_content`: **&utm_content=Victoria**
+4. Edit src/assets/css/custom.css to pull in the hero images, align labels and titles, etc., using classes matchng URL UTM values, which get added to the body tag
 
 ### Adding content to an existing campaign
 
-1. Follow first three steps in "Adding a new Passport campaign"
-2. Add new hero images to campaign's unique folder in landing/passport/assets/
+1. Add new hero images to campaign's unique folder in src/assets/
+2. Follow steps 2-4 in "Adding a new campaign"
 
 ### References
 
-- http://php.net/
 - https://getbootstrap.com/
-- https://github.com/ptdriscoll/npm-workflow
+- https://docs.npmjs.com/misc/scripts
+- https://www.npmjs.com/package/autoprefixer
+- https://www.npmjs.com/package/browserify
+- https://www.npmjs.com/package/clean-css
+- https://www.npmjs.com/package/jshint
+- https://www.npmjs.com/package/live-server
+- https://www.npmjs.com/package/mkdirp
+- https://www.npmjs.com/package/npm-run-all
+- https://www.npmjs.com/package/postcss-cli
+- https://www.npmjs.com/package/uglify-js
+- https://www.npmjs.com/package/uncss
 - https://support.google.com/analytics/answer/1033863?hl=en
