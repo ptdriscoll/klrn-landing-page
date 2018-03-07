@@ -1,9 +1,11 @@
 #Mac
 .DS_Store
 
-#Node
-node_modules/
-**/npm-debug.log
+#Eclipse
+.settings/
+.buildpath
+.project
 
-#other
-reference/
+#Other
+googleAnalytics.php
+facebookPixel.php
