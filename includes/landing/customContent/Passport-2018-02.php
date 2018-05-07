@@ -2,27 +2,27 @@
 $customContent = array(
   'Downton' => array(
       'headline' => 'All episodes of Downton Abbey are available now',
-	  'testHeadline' => 'Start streaming episodes of Downton Abbey today'	  
+	  'headlineTEST' => 'Start streaming episodes of Downton Abbey today'	  
   ),
   'Finding-Your-Roots' => array(
       'headline' => 'All episodes of Finding Your Roots are available now',
-      'testHeadline' => 'Start streaming episodes of Finding Your Roots today'	  
+      'headlineTEST' => 'Start streaming episodes of Finding Your Roots today'	  
   ),
   'NOVA' => array(
       'headline' => 'All episodes of NOVA are available now',
-      'testHeadline' => 'Start streaming episodes of NOVA today'	  
+      'headlineTEST' => 'Start streaming episodes of NOVA today'	  
   ),   
   'Poldark' => array(
       'headline' => 'All episodes of Poldark are available now',
-      'testHeadline' => 'Start streaming episodes of Poldark today'	  
+      'headlineTEST' => 'Start streaming episodes of Poldark today'	  
   ),
   'Victoria' => array(
       'headline' => 'All episodes of Victoria are available now',
-      'testHeadline' => 'Start streaming episodes of Victoria today'	  
+      'headlineTEST' => 'Start streaming episodes of Victoria today'	  
   ), 
   'See-More' => array(
       'headline' => 'All your favorites ... anytime, anywhere. Start streaming today!',
-      'testHeadline' => 'All of your favorite KLRN programs available anytime, anywhere'	  
+      'headlineTEST' => 'All of your favorite KLRN programs available anytime, anywhere'	  
   ), 
   'button-1' => array(
       'headline' => 'All your favorites ... anytime, anywhere. Start streaming today!'	  
