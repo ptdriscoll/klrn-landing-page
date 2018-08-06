@@ -1,7 +1,7 @@
 <?php 
 //get root folder
-$protocol = strpos($_SERVER['SERVER_SIGNATURE'], '443') !== false ? 'https://' : 'http://';
-$root = $protocol . $_SERVER['HTTP_HOST'];
+$protocol = $_SERVER['SERVER_PORT'] == '443' ? 'https://' : 'http://';
+$root = $protocol . $_SERVER['SERVER_NAME'];
 
 //get root includes folder in file system, which is different between localhost and live servers 
 $doc_root = $_SERVER['DOCUMENT_ROOT'];

@@ -18,6 +18,7 @@ $subhead = 'endless entertainment';
 $headline = 'On-demand access to quality PBS programs. On your schedule.';
 $headline = 'Stream your favorite programs anytime, anywhere, on any device';
 $graphGetAccess = 'Get access to KLRN Passport for a year with a one-time contribution of $60. Or sign up to be a KLRN sustainer and receive Passport uninterrupted at $5 a month. How you give is up to you!';
+$graphGetAccess = 'Get access to KLRN Passport when you donate just $5 (or more) a month to KLRN.';
 ?>
 
 <?php include '../includes/landing/header.php'; ?>
@@ -68,7 +69,8 @@ if (array_key_exists($contentKey, $customContent)) {
         </div>
         <div class="col-md-4">
           <h2>Get Started</h2>
-          <p>Become a KLRN member right now and get instant access to extended on-demand quality content.</p>
+          <!--<p>Become a KLRN member right now and get instant access to extended on-demand quality content.</p>-->
+          <p>Become a KLRN member and get instant access to extended on-demand programs, when you want.</p>
           <p>
             <a class="btn btn-primary" href="<?php echo $linkConversion; ?>" role="button">Donate Now &raquo;</a>
           </p>

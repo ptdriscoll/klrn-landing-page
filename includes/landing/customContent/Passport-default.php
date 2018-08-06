@@ -31,7 +31,7 @@ $customContent = array(
   ),		
   'Great-British-Baking-Show' => array(
       'subhead' => 'endless entertainment',
-      'headline' => 'Great TV available on YOUR time'
+      //'headline' => 'Great TV available on YOUR time'
   ),
   'Call-the-Midwife' => array(
       'subhead' => 'endless entertainment',
