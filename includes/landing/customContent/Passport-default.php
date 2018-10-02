@@ -47,7 +47,7 @@ $customContent = array(
   ),
   'Poldark' => array(
       'subhead' => 'endless entertainment',
-      'headline' => 'Because it is worth watching again'
+      'headline' => 'Stream your favorite programs anytime, anywhere, on any device'
   ),
   'Origami' => array(
       'subhead' => 'endless inspiration',
