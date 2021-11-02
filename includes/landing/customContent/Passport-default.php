@@ -15,9 +15,9 @@ $customContent = array(
   'Hawk' => array(
 	  'subhead' => 'endless exploration'
   ),
-  'Downton' => array(
-      'subhead' => 'endless entertainment'
-  ),
+  //'Downton' => array(
+  //    'subhead' => 'endless entertainment'
+  //),
   'Dancers' => array(
       'subhead' => 'endless inspiration'
   ),

@@ -67,7 +67,7 @@ else {
     <meta name="google-site-verification" content="0RONgESHQ4dbMpBb_dbgCfKUyo2PeiyIOoJUb3S642k" />
     <meta name="description" content="<?php echo $description; ?>">
     <meta name="author" content="KLRN Passport provides access to a catalog of PBS programs that you can watch on-demand from your computer, tablet, smartphone, AppleTV or Roku.">
-    <!--<link rel="icon" href="img/favicon.ico">-->
+    <!--<link rel="icon" href="../images/favicon.ico">-->
 
     <title><?php echo $title; ?></title>
 

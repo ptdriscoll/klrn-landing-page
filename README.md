@@ -15,7 +15,7 @@ Google Analytics UTM parameters are used to determine customizations for the her
 
 1. Follow steps at https://github.com/ptdriscoll/npm-workflow
 2. Copy styles.css from https://github.com/ptdriscoll/npm-workflow and add to passport/assets/css/
-3. Add custom labels and titles to the `$customContent` variable in includes/landing/customContent.php
+3. Add custom labels and titles to the `$customContent` variable in includes/landing/customContent/
 4. Add campaign's image folder with images to landing/passport/assets/
 5. Make sure the campaign name in the UTM parameters has "Passport" in it, for example: utm_campaign=Passport-2017
 
