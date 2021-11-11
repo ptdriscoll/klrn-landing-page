@@ -19,9 +19,11 @@ $headline = 'On-demand access to quality PBS programs. On your schedule.';
 $headline = 'Stream your favorite programs anytime, anywhere, on any device';
 $graphGetAccess = 'Get access to KLRN Passport for a year with a one-time contribution of $60. Or sign up to be a KLRN sustainer and receive Passport uninterrupted at $5 a month. How you give is up to you!';
 $graphGetAccess = 'Get access to KLRN Passport when you donate just $5 (or more) a month to KLRN.';
+
+include '../includes/landing/header.php';
 ?>
 
-<?php include '../includes/landing/header.php'; ?>
+<?php //include '../includes/landing/header.php'; ?>
 
 <?php 
 //this finds file named after the utm_campaign to get appropriate $customContent variable
