@@ -23,8 +23,6 @@ $graphGetAccess = 'Get access to KLRN Passport when you donate just $5 (or more)
 include '../includes/landing/header.php';
 ?>
 
-<?php //include '../includes/landing/header.php'; ?>
-
 <?php 
 //this finds file named after the utm_campaign to get appropriate $customContent variable
 if (isset($campaign)) $customContentFile = "../includes/landing/customContent/$campaign.php";
