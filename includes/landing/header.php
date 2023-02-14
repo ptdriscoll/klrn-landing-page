@@ -80,9 +80,7 @@ else {
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <?php if (file_exists($doc_includes.'googleAnalytics.php')) include 'googleAnalytics.php'; ?>
-    
-    <?php if (file_exists($doc_includes.'facebookPixel.php')) include 'facebookPixel.php'; ?>    
+    <?php if (file_exists($doc_includes.'googleAnalytics.php')) include 'googleAnalytics.php'; ?> 
     
   </head>
 
